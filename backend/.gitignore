@@ -3,7 +3,6 @@
 /node_modules
 
 /docker-compose.dev.yml
-/src/pacient/pacient.service.spec.ts
 
 # Logs
 logs

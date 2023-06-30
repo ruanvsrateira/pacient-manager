@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  backend:
+    depends_on:
+      - database
+    container_name: backend_pacients_manager
+    build: ./backend
+    ports:
+      - 3000:3000
+    environment:
+      DB_HOST: database
+
+  database:
+    image: postgres
+    container_name: database_pacients_manager
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "pacients_database"
